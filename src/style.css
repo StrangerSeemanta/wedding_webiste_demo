@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+html {
+  scroll-behavior: smooth;
+}
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	pointer-events: none;
+	z-index: 1111111111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+	color: white;
+	font-size: 30px;
+}
+
+#heart {
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
+	background: url('heart.png') no-repeat;
+	animation: fadeIn 3s linear infinite
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+body {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 900vh;
+  height: 900vh;
+  background: #20276f;
+  background-image: url(img/bg-bottom.png), url(img/moon.png);
+  background-position: bottom center, top right;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 400px 280px;
+  overflow-x: hidden;
+  position: relative;
+  vertical-align: baseline;
+  line-height: 1;
+
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+  margin-top: 600px;
+}
+
+div#cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background: url(img/cloud.png), url(img/cloud.png), url(img/cloud.png), url(img/cloud2.png);
+  background-position: top left, 600px top, 300px 20vh, right 20vh;
+  background-size: 300px 200px, 300px 200px, 300px 200px;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  transition: all 1s linear;
+
+
+}
+
+
+#tiffany {
+  position: absolute;
+
+  background: url(img/tiffany.png) 0px 0px no-repeat;
+  transition: all 1s linear;
+  cursor: pointer;
+  margin-left: 40px;
+  z-index: 11111111;
+  background-size: contain;
+  top: 100px;
+  left: 50px;
+  width: 387px;
+  height: 755px;
+}
+
+#lunaplane {
+  position: absolute;
+  top: 403px;
+  right: 78px;
+  width: 433px;
+  height: 358px;
+  background: url(img/lunaplane.png) 0px 0px no-repeat;
+  transform-style: preserve-3d;
+  transition: transform 1000ms linear;
+}
+
+#btn-weddingDetails {
+  position: absolute;
+  display: block;
+  width: 148px;
+  height: 44px;
+  top: 42px;
+  left: 90px;
+  background: url(img/btn-weekend.png) 0px 0px no-repeat;
+  text-indent: -9999em;
+  scale: 1.2;
+}
+
+#btn-weddingDetails:hover {
+  background-position: 0px -40px;
+}
+
+#btn-registry {
+  position: absolute;
+  display: block;
+  width: 148px;
+  height: 57px;
+  top: 57px;
+  right: -45px;
+  background: url(img/btn-registry.png) 0px 0px no-repeat;
+  text-indent: -9999em;
+}
+
+#btn-registry:hover {
+  background-position: 0px -60px;
+}
+
+#btn-rsvp {
+  position: absolute;
+  display: block;
+  width: 148px;
+  height: 37px;
+  top: 50px;
+  right: 55px;
+  background: url(img/btn-rsvp.png) 0px 0px no-repeat;
+  text-indent: -9999em;
+}
+
+#btn-rsvp:hover {
+  background-position: 0px -60px;
+}
+
+.snow-fall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(img/snow-fall-2.png), url(img/snow-fall-1.png);
+  background-size: 60%, 60%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0px 0px, 630px 10px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Snow Flake */
+/* customizable snowflake styling */
+
+.snowflake {
+  color: #ffffffe1;
+  font-size: 2em;
+  font-family: Arial;
+  text-shadow: 0 0 1px #000;
+  z-index: 111111;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@-webkit-keyframes snowflakes-shake {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px)
+  }
+
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px)
+  }
+
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px)
+  }
+}
+
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%
+  }
+
+  100% {
+    top: 100%
+  }
+}
+
+@keyframes snowflakes-shake {
+  0% {
+    transform: translateX(0px)
+  }
+
+  50% {
+    transform: translateX(80px)
+  }
+
+  100% {
+    transform: translateX(0px)
+  }
+}
+
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running
+}
+
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s
+}
+
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s
+}
+
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, .5s;
+  animation-delay: 6s, .5s
+}
+
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s
+}
+
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s
+}
+
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s
+}
+
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s
+}
+
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s
+}
+
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s
+}
+
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s
+}
+
+.wedding-container {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all linear 250ms;
+}
+
+#wd-box {
+  width: 700px;
+  height: 400px;
+  background: url(img/wedding-details.png) 0 0 no-repeat;
+  background-size: contain;
+  position: relative;
+  transition: all linear 250ms;
+  display: block;
+  margin-left: 40px;
+}
+/* Bunny Baloon */
+#bb {
+  width: 380px;
+  height: 200px;
+  top:1800px;
+  right: 0px;
+  background: url(img/bunnybaloon.png) 0 0 no-repeat;
+  background-size: contain;
+  position: absolute;
+  transition: all linear 250ms;
+  display: block;
+  transition: all linear 1s;
+  animation: bounce 8s  infinite;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+@keyframes bounce{
+  0%{transform:translateX(-50px) translateY(0px)}
+  25%{transform:translateX(70px) translateY(-40px)}
+  50%{transform:translateX(0px) translateY(-140px);}
+  75%{transform:translateX(50px) translateY(0px)}
+  100%{transform:translateX(-50px) translateY(0px)}
+
+
+}
+#rsvp-box {
+  width: 700px;
+  height: 600px;
+  background: url(img/rsvp-box.png) 0px 0px no-repeat;
+  background-size: contain;
+  position: relative;
+  margin: 0 auto;
+  transition: all linear 250ms;
+
+}
+/* #rsvp-box.show {
+  width: 700px;
+} */
+#rsvp-inlineBtn{
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 220px;
+  left: 270px;
+  background: url(img/rsvp-inlineBtn.png) 0 0  no-repeat;
+  background-size: contain;
+  scale: 0.9;
+  cursor: pointer;
+  transition: all linear 250ms;
+}
+#rsvp-inlineBtn:hover{
+  filter:hue-rotate(-90deg)
+}
+#rsvp-inlineBtn:active{
+  filter:saturate(0.2)
+}
+#reg-box {
+  width: 1000px;
+  height: 700px;
+  background: url(img/registry-box.png) 0px 0px no-repeat;
+  background-clip: content-box;
+  position: relative;
+  background-size: contain;
+  margin: 0 auto;
+  transition:all linear 250ms;
+}
+/* #reg-box.show{
+  width: 1000px;
+} */
+#inline-regBtn{
+  position: absolute;
+  width: 170px;
+  height: 60px;
+  top: 230px;
+  left: 400px;
+  background: url(img/inline-regBtn.png) 0 0 no-repeat;
+  background-size: contain;
+  scale: 0.9;
+  cursor: pointer;
+  transition: all linear 250ms;
+}
+#inline-regBtn:hover{
+  filter:hue-rotate(-70deg)
+}
+#inline-regBtn:active{
+  filter:saturate(0.2)
+}
+/* Bunny Baloon */
+

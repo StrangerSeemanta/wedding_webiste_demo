@@ -1,0 +1,111 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Lorem &amp; Ipsum are getting married!</title>
+    <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+    <link rel="stylesheet" href="snowfall.css">
+    <script type='text/javascript' src='jquery-3.7.0.js'></script>
+</head>
+
+<body>
+    <div class="preloader">
+        <h1>Page is loading...keep your patience</h1>
+        <img src="img/heart.png" alt="loading" id="heart">
+    </div>
+    <div class="background-container">
+        <div class="background-animation">
+        </div>
+        <div>
+
+            <div id="cloud"></div>
+            <div class="snowflakes" aria-hidden="true">
+                <div class="snowflake">
+                    ❅
+                </div>
+                <div class="snowflake">
+                    ❅
+                </div>
+                <div class="snowflake">
+                    ❆
+                </div>
+                <div class="snowflake">
+                    ❄
+                </div>
+                <div class="snowflake">
+                    ❅
+                </div>
+                <div class="snowflake">
+                    ❆
+                </div>
+                <div class="snowflake">
+                    ❄
+                </div>
+                <div class="snowflake">
+                    ❅
+                </div>
+                <div class="snowflake">
+                    ❆
+                </div>
+                <div class="snowflake">
+                    ❄
+                </div>
+            </div>
+            <div id="tiffany"></div>
+
+            <section id="section1">
+                    <div id="lunaplane">
+                        <a id="btn-weddingDetails" href="#section2">Wedding Day </a>
+                        <a id="btn-rsvp" href="#section3">RSVP;</a> <!--Link in Script-->
+                        <a id="btn-registry" href="#section4">Registry</a><!--Link in Script-->
+                    </div>
+              
+                
+
+
+
+            </section>
+
+            <section id="section2">
+                    <div id="wd-box"></div>
+                    <div id="bb"></div>
+            </section>
+
+            <section id="section3">
+                    <div id="rsvp-box">
+                        <div id="rsvp-inlineBtn"></div>
+                    </div>
+                   
+            </section>
+
+            <section id="section4">
+                <div id="reg-box">
+                    <div id="inline-regBtn"></div>
+                </div>
+            </section>
+
+            </div>
+            
+</body>
+<script src="script.js"></script>
+<script>
+    
+    window.addEventListener('load', function () {
+            $('.preloader').hide()
+        })
+   
+        // Link For RSPV
+    $("#rsvp-inlineBtn").click(function(){
+        open("#");
+    })
+        //Link For Registry
+    $("#inline-regBtn").click(function(){
+        open("#");
+        
+    })
+
+</script>
+
+</html>

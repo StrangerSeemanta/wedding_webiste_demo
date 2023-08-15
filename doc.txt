@@ -1,0 +1,20 @@
+Hi, This is a customizable parallax website for wedding purpose.
+
+NOTE: I USED TIFFANY AND LEONE AS A RANDOM NAME TO MAKE WEBSITE MORE REAL;
+
+How To Change:
+    1. You can see the well organized CSS file "style.css";
+    2. CSS FOR Snowfall Effects in the background stored in the file named "snowfall.css"
+    3. I used jQuery To make website faster and more readble;
+    4. All the images have their descriptive name. Just Change the image with the same name to customize .{Website Is Image Based}
+
+Responsive:
+    .I used XML attributes and meta tag to make it Responsive
+    .So dont worry about making Responsive. You can put Content in absolute value [px,pc,vh];
+    .It will automatically render for particular device .(^-^)
+
+Contact Through My Email On The Order Page:
+Thanks
+
+
+
